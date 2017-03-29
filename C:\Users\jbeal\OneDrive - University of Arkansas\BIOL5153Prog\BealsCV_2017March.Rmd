@@ -1,19 +1,16 @@
-<center>
 **Jennifer Beals, M.S.**  
 1263 W. Mt. Comfort Rd, Apt. 111, Fayetteville, AR 72703  
 Mobile: (215)512-7161  
 jmbeals@uark.edu  
 jmb622@drexel.edu
-</center>
 
 ##### **EDUCATION:**
-<indent>
-PhD, Biology, Ecology and Evolutionary Biology, University of Arkansas, Fayetteville, AR, in progress, August 2016-present
- 
-M.S., Biology, Ecology and Natural Resources, St. Cloud State University, St. Cloud, MN, August 2016.
 
-B.S., Biology, Ecology concentration, The Pennsylvania State University, University Park, PA, August 2007.
-</indent>
+ PhD, Biology, Ecology and Evolutionary Biology, University of Arkansas, Fayetteville, AR, in progress, August 2016-present
+ 
+ M.S., Biology, Ecology and Natural Resources, St. Cloud State University, St. Cloud, MN, August 2016.
+
+ B.S., Biology, Ecology concentration, The Pennsylvania State University, University Park, PA, August 2007.
 
 ##### **EXPERIENCE:**
 
@@ -85,6 +82,7 @@ NSF Award No. 1515305. East Asia and Pacific Summer Institutes (fellow, Japan). 
 Beals, J. 2011. Actinella punctata. In Diatoms of the United States. Retrieved December 1, 2013, from http://westerndiatoms.colorado.edu/taxa/species/actinella_punctat
 
 Beals, J. 2012. Eunotia lewisii. In Diatoms of the United States. Retrieved December 1, 2013, from http://westerndiatoms.colorado.edu/taxa/species/eunotia_lewisii  
+
 Beals, J. and M. Potapova. 2013. Type material of the diatom Eunotia arcuoides Foged. Proceedings of the Academy of Natural Sciences of Philadelphia 162: 25-32
 
 Desianti, N., M. Potapova and J. Beals. 2015. Examination of the type materials of diatoms described by Hohn and Hellerman from the Atlantic Coast of the United States. Diatom Research 30(2): 93-116.
@@ -110,6 +108,7 @@ Beals, J.M. and M. Potapova. 2012. The type material of Eunotia arcuoides Foged.
 Boyd-Lecky, B., J.M. Beals and M.L. Julius. 2016. Are wood eating catfish a myth? Presentation at the Joint Meeting if Ichthyologists and Herpetologists, New Orleans, LA, USA, July 6-10 2016.
 
 Desianti, N., M. Potapova and J. Beals. 2014. Examination of the type materials of diatoms described from the Atlantic Coast of the United States. Presentation at Drexel University College of Arts and Sciences Research Days, Philadelphia, Pennsylvania, February 17-18, 2014.  
+
 Julius, M.L. and J.M. Beals. 2016. A new molecular clock estimate for diatoms. Presentation at the 70th Phycological Society of America Annual Meeting, Cleveland, OH, USA, July 24-30 2016.
 
 Potapova, M. and J.M. Beals. 2012. Diatoms of North-Central Pennsylvania. Presentation at the 22nd International Diatom Symposium, Ghent, Belgium, August 26-31, 2012.
