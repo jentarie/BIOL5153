@@ -1,13 +1,13 @@
 #!/usr/bin/python
 
+import sys
 
+gff_in = sys.argv[2];
+fsa_in = sys.argv[1];
                  
-gff_in = "watermelon.gff"
-fsa_in = "watermelon.fsa"
 gff_file = open(gff_in, 'r')
 fsa_file = open(fsa_in, 'r')
-
- 
+                   
 
 genome = ""
 
@@ -23,9 +23,6 @@ len_genome = len(genome)
 #print(len_genome)
 
 #write each feature class to separate files
-
-
-
 exon_out = open("exon.txt", "w")
 CDS_out = open("CDS.txt", "w")
 intron_out = open("intron.txt", "w")
@@ -217,8 +214,7 @@ for line in tRNA_locations:
     tRNA_gc = round(((tRNA_gc_count/len(tRNA_coding_sequence))*100), 2)
 #print("length of tRNA coding sequence is: " + str(len(tRNA_coding_sequence)))
 
-
-
+#Print final output
 print("exon",'\t\t', CDS_length, '\t', "(" + str(round(CDS_percent, 1)) + "%)",'\t', CDS_gc)
 print("intron", '\t\t', intron_length, '\t', "(" + str(round(intron_percent, 1)) + "%)",'\t', intron_gc)
 print("misc_feature", '\t', misc_length, '\t', "(" + str(round(misc_percent, 1)) + "%)",'\t', misc_gc)
