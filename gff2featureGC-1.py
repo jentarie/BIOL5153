@@ -8,7 +8,6 @@ Created on Fri May  5 12:56:29 2017
 
 #!/usr/bin/python
  
-import sys
  
 def clean_seq(input_seq):
     clean = input_seq.upper()
@@ -29,36 +28,28 @@ def nuc_freq(sequence, base, sig_figs=2):
     # return the frequency and length of nucleotide
     return(length, round(base_freq, sig_figs))
  
+def GC_frequency(sequence, sig_figs=2):
+    length = len(sequence)
+    GC_count = sequence.count('G') + sequence.count('C')
+    GC_freq = GC_count/length
+    return(round(GC_freq, sig_figs))
+
+
  
 #reverse complement dna
 def rev_compl(fragment):
     compl = fragment.replace("ACTG", "tgac")
     return compl.upper()
  
-#function for G+C
-### Try to extract all the gene sequences from the gcc file for exons only.
-#fine if on the coding strand, but could be on the negative strang (function for reverse complement)
-#print/store/build a fasta sequence of each gene (coding sequence) eg:
-#>cox1
-#TGATTT...
-#create dictionary genes; key= gene name, value=another dictionar(ies) {key=exon number, value = sequence}
- 
- 
-import collections
-#from collections import defaultdict
- 
+
 #key = feeature_type, value
 feature_sequences = {}
- 
-#key = gene, value = another dictionary[key=exon number, value= sequence]
-# gene_sequences[cox1][1]=the sequence for the 1st exon of cox1
-# gene_sequences[cox1][2]=the sequence for the 2nd exon of cox1
+
  
 #tuple method - almost works!
 gene_sequences = {}
  
-#nested dictionaries method
-#Gene_sequences = defaultdict(dict)
+
  
  
 gff_file = '/home/jen/Desktop/BIOL5153/watermelon_files/watermelon.gff'
@@ -140,62 +131,35 @@ for line in gff_in:
         else:
             exon_num = '0'
  
-        #gene_exons = dict(zip(zip(gene_name,exon_num),fragment))
-        #print(gene_sequenceS)
-        #print(fragment)
-       
-#        for gene_name, exon_num, fragment in gene_exons.items():
-#            if gene_name in gene_sequences:
-#                gene_sequnces[gene_name] += fragment
-#            else:
-#                gene_sequences[gene_name] = fragment
- 
+
 #build dictionary using tuple as key
         gene_sequences[(gene_name, exon_num)] = fragment
 #print(gene_sequences)   
  
-        
-for gene_name, exon_num in gene_sequences:
-    print(">" + gene_name + ' ' + str(exon_num) + '\n' + gene_sequences[(gene_name, exon_num)])
-   
-    
-#genes_compiled={}
+gff_in.close()        
 
-#genes_compiled = collections.OrderedDict(sorted(gene_sequences.items()))
+
+genes_compiled={}
+
+for gene_name, exon_num in sorted(gene_sequences):
+    #print(">" + gene_name + ' ' + str(exon_num) + '\n' + gene_sequences[(gene_name, exon_num)])
+    if gene_name in genes_compiled:
+        genes_compiled[gene_name] += gene_sequences[(gene_name, exon_num)]
+    else:
+            genes_compiled[gene_name] = gene_sequences[(gene_name, exon_num)]
 #print(genes_compiled)
 
-#for gene, exon_num, sequence in genes_compiled.items():
-    
 
-#for gene_name, exon_num in gene_sequences:
-#   if gene_name in genes_compiled:
-       
+for gene, sequence in genes_compiled.items():
+    print(">" + gene + '\n' + sequence)
+
         
+for gene, sequence in genes_compiled.items():
+    GC_content = GC_frequency(sequence)
+    print("GC content of " + gene + ':\t ' + str(GC_content) + '%')
 
+  
 
-
-
-#for gene_name, sequence in Gene_sequences.items():
-#    print(gene_name)
-#    print(sequence)
-       
-    #store the fragment in the gene_sequence dictionary
- 
- 
-#for gene, sequence in gene_sequences.items():
-#    print(gene + '\t' + sequence)
- 
-#    g_count = fragment.count('G')
-#    c_count = fragment.count('C')
-#    gc_count = g_count + c_count  
- 
-    #populate our dictionary
-#    if type in feature_sequences:
-#        feature_sequences[type] += fragment
-#    else:
-#        feature_sequences[type] = fragment
-   
-#gff_in.close()
  
 #for feature, sequence in feature_sequences.items():
 #    print(feature + '\t' + str(len(sequence)))
